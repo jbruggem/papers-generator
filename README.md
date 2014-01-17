@@ -3,6 +3,8 @@ papers-generator
 
 Generate pages with small paper tokens to print out.
 
+![build status](https://travis-ci.org/jbruggem/papers-generator.png)
+
 
 Introduction
 ------------
