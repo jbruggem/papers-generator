@@ -31,6 +31,5 @@ Test can be done with node and vows.
 
 ```
 npm install 
-npm install -g mocha
 npm test
 ```
