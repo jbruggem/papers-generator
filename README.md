@@ -27,9 +27,10 @@ Comments will guide you through the process of customizing the output.
 Test
 -----
 
-Test can be done with node.
+Test can be done with node and vows.
 
 ```
-npm install
+npm install 
+npm install -g mocha
 npm test
 ```

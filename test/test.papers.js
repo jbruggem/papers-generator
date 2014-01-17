@@ -1,4 +1,3 @@
-
 var assert = require("assert");
 
 describe('papers', function() {

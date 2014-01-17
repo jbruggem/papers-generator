@@ -5,7 +5,7 @@
   "description": "Generate papers for real-life games.",
   
   "scripts": {
-    "test": "vows --spec --isolate"
+    "test": "mocha -R spec"
   },
   
   "repository": {
@@ -15,7 +15,6 @@
   
   "dependencies" : {
      "domino":"*",
-     "mocha":"*",
      "zepto-node":"*"
   },
   "license": "Apache License 2.0",
