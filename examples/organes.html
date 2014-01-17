@@ -1,0 +1,101 @@
+<!--
+
+
+
+
+
+See medicaments.html for a fully-commented example
+
+
+
+
+
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        <link rel="stylesheet" type="text/css" href="lib/papiers.css" />
+        <script src="zepto/zepto.js"></script>
+        <script src="lib/papers.functions.js"></script>
+        <script src="lib/papers.js"></script>
+
+       <style type="text/css"> 
+        </style>
+
+        <script type="text/javascript">
+			
+			var txt = "voleur:<br/>passeur:<br/>vendeur:";
+			
+			$(function(){
+				var sourceElement = $('#source section');
+				var targetElement = $("#organes");
+	 
+				var organes = [
+					{
+						"tit": "Coeur",
+						"img": "src/coeur.jpg",
+						"txt": txt,
+					},
+					{
+						"tit": "Rate",
+						"img": "src/rate.jpg",
+						"txt": txt,
+					},
+					{
+						"tit": "Poumon",
+						"img": "src/poumon.jpg",
+						"txt": txt,
+					},
+					{
+						"tit": "Œil",
+						"img": "src/oeil.jpg",
+						"txt": txt,
+					},
+					{
+						"tit": "Rein",
+						"img": "src/rein.jpg",
+						"txt": txt,
+					},
+					{
+						"tit": "Foie",
+						"img": "src/foie.jpg",
+						"txt": txt,
+					},
+					{
+						"tit": "Pancreas",
+						"img": "src/pancreas.jpg",
+						"txt": txt,
+					},
+				];
+				
+				papers.addDataToDocument(
+					papers.helpers.multiplyList(organes,15),
+					sourceElement,
+					targetElement,
+					papers.formatters.titleImageText
+				);
+			
+		});
+			
+		</script>
+		
+		
+	</head>
+	<body>
+		<div id="organes">
+		
+		</div>
+		
+		
+		<div id="source" style="clear:both;display:none;">
+			<section class="card">
+				<h3 class="titre"></h3>
+				<img class="image"/>
+				<p class="texte"></p>
+			</section>
+		</div>
+	
+	</body>
+</html>

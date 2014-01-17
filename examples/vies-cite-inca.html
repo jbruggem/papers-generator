@@ -1,0 +1,101 @@
+<!--
+
+
+
+
+
+See medicaments.html for a fully-commented example
+
+
+
+
+
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        <link rel="stylesheet" type="text/css" href="lib/papiers.css" />
+        <script src="zepto/zepto.js"></script>
+        <script src="lib/papers.functions.js"></script>
+        <script src="lib/papers.js"></script>
+
+        <style type="text/css"> 
+        
+            section.card h3 {
+                margin:0;
+            }
+        
+            section.card h3,
+            section.card p.texte  {
+                color: #332200;
+                background:rgba(255,255,255,0.9);
+              padding:10px;
+            }
+            
+            section.card{
+              height:11em;
+            }
+            
+            
+            section.card p.texte{
+              margin: 60px 0 0 0;
+              font-size:140%;
+              text-align: center;
+              line-height:1;
+            }
+            
+            section.card img{
+              width: inherit;
+              opacity: 1;
+            }
+        </style>
+
+        <script type="text/javascript">
+    
+			
+			$(function(){
+				var sourceElement = $('#source section');
+				var targetElement = $("#vies");
+	 
+        var roles = 
+          [
+          "Chef de tribu",
+          "Sorcier",
+          "Guerrier",
+          "Sarbacannier",
+          "Cannibale",
+          "Nain"
+          ]
+					.map(function(s){return {tit: s, img: "src/naheul.jpg", txt: 'Une vie'}});
+					
+				papers.addDataToDocument(
+					papers.helpers.duplicateList(roles,3),
+					sourceElement,
+					targetElement,
+					papers.formatters.titleImageText
+				);
+			
+		});
+			
+		</script>
+		
+		
+	</head>
+	<body>
+		<div id="vies">
+		
+		</div>
+		
+		
+		<div id="source" style="clear:both;display:none;">
+			<section class="card">
+				<h3 class="titre"></h3>
+				<img class="image"/>
+				<p class="texte"></p>
+			</section>
+		</div>
+	
+	</body>
+</html>

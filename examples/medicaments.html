@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        <!-- include papers-generator -->
+        <link rel="stylesheet" type="text/css" href="lib/papiers.css" />
+        <script src="zepto/zepto.js"></script>
+        <script src="lib/papers.functions.js"></script>
+        <script src="lib/papers.js"></script>
+
+        <!-- customize style here -->
+        <style type="text/css"> 
+        
+			section.card {
+				height:5em;
+			}
+			section.card img{
+				height:inherit;
+				opacity:0.8;
+			}
+			section.card h3{
+				text-align:left;
+				margin-left:1em;
+				width:40%;
+				
+			}
+        </style>
+
+        <!-- call paper generator here -->
+        <script type="text/javascript">
+			
+        // utility function for this particular example
+        // we use the name of drugs as our titles
+        var getDrugList = function(){
+          return    (
+                      "Doliprane Efferalgan Dafalgan Levo-thyrox Kardegic Spasfon Tahor Voltarene Metha-done Aphp "+
+                      "Eludril Ixprim Para-cetamol Biogaran Forlax Magne b6 Helicidine Pias-cledine Lamaline Gaviscon"+
+                      " Daflon Rhino-fluimucil Plavix Subutex Aerius Orelox Dextropro-poxyphene Parac Merck Inexium"+
+                      " Efferalgan Codeine Antalvic Meteospasmyl Toplexil"
+                    ).split(" ")
+                    .slice(0,30);
+        }
+      
+        // When page is loaded
+        $(function(){
+
+            // DOM piece to copy for every paper
+            var sourceElement = $('#source section');
+            // target container
+            var targetElement = $("#liste");
+	 
+            ////////////////////////////////////////
+            // Data generation
+            ////////////////////////////////////////
+            
+            // in this example, the illustration is always the same
+            // image (not provided here) and there is no text.
+            var medocs = getDrugList().map(function(s){return {tit: s.replace('-','- '), img: "src/pillule.jpg", txt: ''}});
+          
+            ////////////////////////////////////////
+            // Calling the library
+            ////////////////////////////////////////
+            
+            // multiply the source data before passing it in (i.e. iterate over the combinations)
+            var sourceData = papers.helpers.multiplyList(medocs,30); 
+            
+            // this is the default formatter. It relies on the presence of an h3, img and p element.
+            var formatter =  papers.formatters.titleImageText;
+            
+             // main function: create the DOM elements
+            papers.addDataToDocument( sourceData, sourceElement, targetElement, formatter );
+			
+        });
+			
+		</script>
+		
+		
+	</head>
+	<body>
+    
+    
+    <!-- container for the generated elements -->
+		<div id="liste">
+		
+		</div>
+  
+    <!-- DOM element to copy for each element -->
+		<div id="source" style="clear:both;display:none;">
+			<section class="card">
+				<h3 class="titre"></h3>
+				<img class="image"/>
+				<p class="texte"></p>
+			</section>
+		</div>
+    
+    
+	
+	</body>
+</html>
