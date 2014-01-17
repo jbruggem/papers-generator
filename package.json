@@ -1,0 +1,26 @@
+{
+  "name": "papers-generator",
+  "version": "0.0.1",
+  "author": "Jehan Bruggeman <jbruggeman@symzo.be>",
+  "description": "Generate papers for real-life games.",
+  
+  "scripts": {
+    "test": "vows --spec --isolate"
+  },
+  
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jbruggem/papers-generator.git"
+  },
+  
+  "dependencies" : {
+     "domino":"*",
+     "mocha":"*",
+     "zepto-node":"*"
+  },
+  "license": "Apache License 2.0",
+  "engines": {
+    "node": ">=0.10"
+  }
+}
+
