@@ -1,0 +1,78 @@
+@page  
+{ 
+    /* this affects the margin in the printer settings */ 
+    margin: 0.5cm 0mm 0mm 0.5cm;  
+} 
+
+@media all
+{
+    body{
+        background:#EFEFEF;
+    }
+}
+
+@media print
+{
+    body, html{
+      margin:0;
+      padding:0;
+    }
+
+    body{
+        background:transparent;
+    }
+    
+    section.card{
+        background:#EFEFEF;
+    }
+         
+     .noprint{
+        display:none;    
+     }
+     
+}
+
+section.card {
+	text-align:center;
+	width:15em;
+	height:12em;
+	border-radius:0.3em;
+	background:#FFFFFF;
+	border:1px solid;
+	display:inline-block;
+	padding:0em;
+	float:left;
+	margin:0.7em;
+	font-size:80%;
+	font-family:Ubuntu, Liberation sans, Helvetica;
+	overflow:hidden;
+	page-break-inside: avoid;
+	position:relative;
+}
+
+section.card h3{
+	font-weight:normal;
+	font-size:150%;
+	font-family: Serif;
+	margin:0.5em 0 0 0;
+	padding:0;
+}
+
+section.card *{
+	position:relative;
+	z-index:1;
+}
+
+section.card p{
+	text-align:left;
+	padding:0;
+	margin:0em 0 0 0.5em;
+	line-height: 3em;
+}
+section.card img{
+	position:absolute;
+	bottom:0;
+	z-index:0;
+	right:0;
+}
+
