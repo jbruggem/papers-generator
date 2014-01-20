@@ -14,8 +14,8 @@
   },
   
   "dependencies" : {
-     "domino":"*",
-     "zepto-node":"*"
+     "domino":"1.0.*",
+     "zepto-node":"1.0.*"
   },  
   
   "devDependencies": {
