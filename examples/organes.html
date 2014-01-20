@@ -15,26 +15,26 @@ See medicaments.html for a fully-commented example
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        
+
         <link rel="stylesheet" type="text/css" href="lib/papiers.css" />
         <script src="zepto/zepto.js"></script>
         <script src="lib/papers.functions.js"></script>
         <script src="lib/papers.js"></script>
 
-       <style type="text/css"> 
+       <style type="text/css">
         </style>
 
         <script type="text/javascript">
-			
+
 			var txt = "voleur:<br/>passeur:<br/>vendeur:";
-			
+
 			$(function(){
 				var sourceElement = $('#source section');
 				var targetElement = $("#organes");
-	 
+
 				var organes = [
 					{
-						"tit": "Coeur",
+						"tit": "Cœur",
 						"img": "src/coeur.jpg",
 						"txt": txt,
 					},
@@ -69,26 +69,26 @@ See medicaments.html for a fully-commented example
 						"txt": txt,
 					},
 				];
-				
+
 				papers.addDataToDocument(
 					papers.helpers.multiplyList(organes,15),
 					sourceElement,
 					targetElement,
 					papers.formatters.titleImageText
 				);
-			
+
 		});
-			
+
 		</script>
-		
-		
+
+
 	</head>
 	<body>
 		<div id="organes">
-		
+
 		</div>
-		
-		
+
+
 		<div id="source" style="clear:both;display:none;">
 			<section class="card">
 				<h3 class="titre"></h3>
@@ -96,6 +96,6 @@ See medicaments.html for a fully-commented example
 				<p class="texte"></p>
 			</section>
 		</div>
-	
+
 	</body>
 </html>
