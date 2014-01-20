@@ -29,7 +29,7 @@ Comments will guide you through the process of customizing the output.
 Test
 -----
 
-Test can be done with node and vows.
+Test can be done with node and mocha.
 
 ```
 npm install
