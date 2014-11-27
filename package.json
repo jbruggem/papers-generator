@@ -3,29 +3,23 @@
   "version": "0.0.1",
   "author": "Jehan Bruggeman <jbruggeman@symzo.be>",
   "description": "Generate papers for real-life games.",
-  
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha -R spec"
+    "test": "mocha -R spec"
   },
-  
   "repository": {
     "type": "git",
     "url": "https://github.com/jbruggem/papers-generator.git"
   },
-  
-  "dependencies" : {
-     "domino":"1.0.*",
-     "zepto-node":"1.0.*"
-  },  
-  
-  "devDependencies": {
-     "mocha": "1.13.*"
+  "dependencies": {
+    "domino": "1.0.*",
+    "zepto": "0.0.4",
+    "zepto-node": "1.0.*"
   },
-  
+  "devDependencies": {
+    "mocha": "1.13.*"
+  },
   "license": "Apache License 2.0",
-  
   "engines": {
     "node": ">=0.10"
   }
 }
-
