@@ -19,13 +19,13 @@ describe('papers', function() {
   var $ = zeptoEnv;
 
   var dataList = function(){ return [
-    {'tit': "a", 'img': "src/img/a", 'txt': "test a text" },
-    {'tit': "b", 'img': "src/img/b", 'txt': "test b text" },
-    {'tit': "c", 'img': "src/img/c", 'txt': "test c text" },
-  ]; 
-  }
+      {'tit': "a", 'img': "src/img/a", 'txt': "test a text" },
+      {'tit': "b", 'img': "src/img/b", 'txt': "test b text" },
+      {'tit': "c", 'img': "src/img/c", 'txt': "test c text" },
+    ]; 
+  };
 
-  var srcElem = function(){ return "<section><h3></h3><img/><p></p></section>"; }
+  var srcElem = function(){ return "<section><h3></h3><img/><p></p></section>"; };
 
   describe('paper object' , function() {
     
